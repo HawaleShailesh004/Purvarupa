@@ -1,0 +1,218 @@
+{
+  "landing": {
+    "title": "TB Pre-Screening Platform",
+    "hero": {
+      "title": "Early Detection Saves Lives",
+      "subtitle": "Quick, confidential tuberculosis pre-screening to help identify potential TB symptoms and connect you with appropriate healthcare resources."
+    },
+    "cta": {
+      "start": "Start Screening",
+      "duration": "Takes 5-10 minutes"
+    },
+    "features": {
+      "title": "How We Help You",
+      "screening": {
+        "title": "Smart Screening",
+        "desc": "AI-assisted questionnaire that adapts based on your responses"
+      },
+      "referrals": {
+        "title": "Find Care",
+        "desc": "Locate nearby TB testing centers and healthcare facilities"
+      },
+      "reports": {
+        "title": "Get Reports", 
+        "desc": "Download detailed PDF reports to share with your doctor"
+      },
+      "languages": {
+        "title": "Multiple Languages",
+        "desc": "Available in English, Hindi, and Marathi"
+      }
+    },
+    "disclaimer": {
+      "title": "Important Medical Disclaimer",
+      "text": "This tool provides health information and should not replace professional medical advice. Always consult with a qualified healthcare provider for proper diagnosis and treatment."
+    },
+    "footer": {
+      "text": "Developed to support early TB detection and improve healthcare access."
+    }
+  },
+  "screening": {
+    "step": "Step",
+    "basic": {
+      "title": "Basic Information",
+      "subtitle": "Please provide some basic details to help us assess your TB risk.",
+      "name": "Full Name",
+      "name_placeholder": "Enter your full name",
+      "age": "Age",
+      "gender": "Gender",
+      "gender_placeholder": "Select gender",
+      "gender_options": {
+        "male": "Male",
+        "female": "Female", 
+        "other": "Other",
+        "prefer_not": "Prefer not to say"
+      },
+      "location": "Location",
+      "location_placeholder": "City, District, State",
+      "contact": "Phone Number",
+      "contact_placeholder": "+91 98765 43210"
+    },
+    "symptoms": {
+      "title": "Symptom Assessment",
+      "subtitle": "Please select all symptoms you have experienced recently.",
+      "cough_gt_2_weeks": "Cough lasting more than 2 weeks",
+      "cough_with_sputum": "Cough with sputum (phlegm)",
+      "cough_with_blood": "Coughing up blood or blood-stained sputum",
+      "fever_evening": "Fever, especially in the evening or night",
+      "weight_loss": "Unexplained weight loss",
+      "night_sweats": "Night sweats",
+      "chest_pain": "Chest pain or difficulty breathing",
+      "loss_of_appetite": "Loss of appetite",
+      "none_of_the_above": "None of the above symptoms"
+    },
+    "deep": {
+      "select_one": "Please select the option that best describes your situation.",
+      "cough_duration": {
+        "title": "How long have you had this cough?",
+        "options": {
+          "short": "Less than 2 weeks",
+          "medium": "2-4 weeks",
+          "long": "More than 1 month"
+        }
+      },
+      "cough_type": {
+        "title": "What type of cough do you have?",
+        "options": {
+          "dry": "Dry cough",
+          "sputum": "Cough with sputum (phlegm)", 
+          "blood": "Cough with blood"
+        }
+      },
+      "fever_pattern": {
+        "title": "Describe your fever pattern:",
+        "options": {
+          "evening": "Evening/low-grade fever",
+          "high": "High fever with chills",
+          "none": "No fever"
+        }
+      },
+      "weight_appetite": {
+        "title": "Have you experienced any of the following?",
+        "options": {
+          "weight": "Weight loss",
+          "appetite": "Loss of appetite",
+          "both": "Both weight loss and loss of appetite",
+          "none": "Neither"
+        }
+      },
+      "night_sweats": {
+        "title": "Do you experience any of these?",
+        "options": {
+          "sweats": "Night sweats",
+          "fatigue": "Persistent fatigue",
+          "both": "Both night sweats and fatigue",
+          "none": "Neither"
+        }
+      },
+      "exposure": {
+        "title": "Have you had contact with anyone with TB?",
+        "options": {
+          "family": "Family member with TB",
+          "workplace": "Close workplace contact",
+          "community": "Neighbor or community contact",
+          "none": "No known contact"
+        }
+      }
+    },
+    "upload": {
+      "title": "Upload Medical Reports (Optional)",
+      "subtitle": "You can upload any existing medical reports to help with the assessment.",
+      "chest_xray": "Chest X-ray",
+      "sputum_test": "Sputum test / CBNAAT", 
+      "blood_test": "Blood test results",
+      "drop_files": "Drop files here to upload",
+      "or_click": "or click to browse files",
+      "file_limit": "Maximum file size: 10MB. Supported: JPG, PNG, PDF",
+      "uploaded_files": "Uploaded Files",
+      "success": "Upload Successful",
+      "error": "Upload Error",
+      "file_too_large": "File size exceeds 10MB limit",
+      "uploaded_successfully": "uploaded successfully"
+    },
+    "review": {
+      "title": "Review Your Information",
+      "subtitle": "Please review the information you've provided before submitting.",
+      "basic_info": "Basic Information",
+      "symptoms": "Reported Symptoms",
+      "detailed_questions": "Detailed Responses",
+      "uploaded_files": "Uploaded Files",
+      "no_symptoms": "No symptoms reported",
+      "consent_text": "By submitting this screening, I understand that this is not a medical diagnosis and I should consult with a healthcare professional for proper evaluation.",
+      "submit": "Submit for Analysis",
+      "analyzing": "Analyzing..."
+    }
+  },
+  "result": {
+    "likelihood_title": "TB Likelihood Assessment",
+    "likelihood": {
+      "high": "HIGH RISK",
+      "moderate": "MODERATE RISK", 
+      "low": "LOW RISK",
+      "confirmed": "HIGH CONCERN"
+    },
+    "local_score": "Risk Score",
+    "confidence": "AI Confidence",
+    "urgency": "Recommended Action",
+    "urgency": {
+      "immediate": "SEEK CARE IMMEDIATELY",
+      "testsoon": "GET TESTED SOON",
+      "monitor": "CONTINUE MONITORING"
+    },
+    "why_title": "Why This Assessment?",
+    "recommended_tests": "Recommended Medical Tests",
+    "referrals_title": "Nearby TB Testing Centers",
+    "education": {
+      "title": "About Tuberculosis (TB)",
+      "what_is_tb": "TB is a bacterial infection that mainly affects the lungs but can affect any part of the body.",
+      "how_spreads": "It spreads through air when people with active TB cough, sneeze, or spit.",
+      "curable": "TB is completely curable with proper treatment and medication adherence.", 
+      "next_steps": "Early detection and treatment prevent spread to others and serious complications.",
+      "helpline": "National TB Helpline"
+    },
+    "disclaimer": {
+      "title": "Important Medical Disclaimer",
+      "text": "This screening result is not a medical diagnosis. Please show this report to a qualified healthcare professional for proper evaluation and follow-up care."
+    },
+    "download_pdf": "Download PDF Report",
+    "generating": "Generating PDF...",
+    "new_screening": "New Screening",
+    "no_data": "No screening data found.",
+    "start_screening": "Start Screening",
+    "no_reasons": "No specific reasons available.",
+    "no_referrals": "No referrals available at this time.",
+    "distance": "Distance",
+    "call": "Call",
+    "directions": "Directions",
+    "view_on_map": "View All on Map"
+  },
+  "common": {
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "optional": "Optional",
+    "required": "Required",
+    "of": "of",
+    "years": "years"
+  },
+  "validation": {
+    "age_required": "Age is required",
+    "age_invalid": "Please enter a valid age between 0 and 110",
+    "required_field": "This field is required"
+  }
+}

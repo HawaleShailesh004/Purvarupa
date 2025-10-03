@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "name": "District TB Center - Central",
+    "type": "DOTS center", 
+    "phone": "+91 98765 43210",
+    "address": "123 Medical Complex, Central District, Mumbai, Maharashtra 400001",
+    "lat": 19.0760,
+    "lng": 72.8777,
+    "distance": "2.3 km"
+  },
+  {
+    "id": "2", 
+    "name": "Government General Hospital TB Wing",
+    "type": "Hospital",
+    "phone": "+91 98765 43211", 
+    "address": "456 Hospital Road, Dadar, Mumbai, Maharashtra 400014",
+    "lat": 19.0176,
+    "lng": 72.8562,
+    "distance": "4.1 km"
+  },
+  {
+    "id": "3",
+    "name": "City Diagnostic Lab - TB Testing",
+    "type": "Laboratory", 
+    "phone": "+91 98765 43212",
+    "address": "789 Lab Street, Andheri, Mumbai, Maharashtra 400069",
+    "lat": 19.1136,
+    "lng": 72.8697,
+    "distance": "6.7 km"
+  },
+  {
+    "id": "4",
+    "name": "Dr. Sharma's Chest Clinic", 
+    "type": "Clinic",
+    "phone": "+91 98765 43213",
+    "address": "321 Clinic Plaza, Bandra, Mumbai, Maharashtra 400050", 
+    "lat": 19.0596,
+    "lng": 72.8295,
+    "distance": "5.2 km"
+  },
+  {
+    "id": "5",
+    "name": "Metro Pulmonary Center",
+    "type": "Specialist Center",
+    "phone": "+91 98765 43214",
+    "address": "654 Metro Building, Powai, Mumbai, Maharashtra 400076",
+    "lat": 19.1197,
+    "lng": 72.9073, 
+    "distance": "8.9 km"
+  },
+  {
+    "id": "6",
+    "name": "Community Health Worker - Ravi Kumar",
+    "type": "Community Support",
+    "phone": "+91 98765 43215", 
+    "address": "Local Community Center, Dharavi, Mumbai, Maharashtra 400017",
+    "lat": 19.0423,
+    "lng": 72.8570,
+    "distance": "3.8 km"
+  }
+]
