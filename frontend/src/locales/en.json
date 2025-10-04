@@ -318,6 +318,7 @@
       "no_symptoms": "No symptoms reported",
       "consent_text": "By submitting this screening, I understand that this is not a medical diagnosis and I should consult with a healthcare professional for proper evaluation.",
       "submit": "Submit for Analysis",
+      "restart": "Restart Screening", 
       "analyzing": "Analyzing..."
     }
   },
