@@ -1,6 +1,6 @@
 {
   "landing": {
-    "title": "TB Pre-Screening Platform",
+    "title": "PurvaRupa",
     "hero": {
       "title": "Early Detection Saves Lives",
       "subtitle": "Quick, confidential tuberculosis pre-screening to help identify potential TB symptoms and connect you with appropriate healthcare resources."
@@ -20,7 +20,7 @@
         "desc": "Locate nearby TB testing centers and healthcare facilities"
       },
       "reports": {
-        "title": "Get Reports", 
+        "title": "Get Reports",
         "desc": "Download detailed PDF reports to share with your doctor"
       },
       "languages": {
@@ -28,6 +28,17 @@
         "desc": "Available in English, Hindi, and Marathi"
       }
     },
+
+    "facts": {
+      "title": "Why Screening Matters",
+      "points": {
+        "one": "India carries nearly 27% of the world’s TB burden.",
+        "two": "Every year, over 3 million Indians develop TB.",
+        "three": "Early detection can stop TB from spreading to 10–15 people each year.",
+        "four": "Early diagnosis saves lives by reducing TB deaths."
+      }
+    },
+
     "disclaimer": {
       "title": "Important Medical Disclaimer",
       "text": "This tool provides health information and should not replace professional medical advice. Always consult with a qualified healthcare provider for proper diagnosis and treatment."
@@ -48,7 +59,7 @@
       "gender_placeholder": "Select gender",
       "gender_options": {
         "male": "Male",
-        "female": "Female", 
+        "female": "Female",
         "other": "Other",
         "prefer_not": "Prefer not to say"
       },
@@ -58,8 +69,8 @@
       "contact_placeholder": "+91 98765 43210"
     },
     "symptoms": {
-      "title": "Symptom Assessment",
-      "subtitle": "Please select all symptoms you have experienced recently.",
+      "title": "Symptom & Risk Assessment",
+      "subtitle": "Please select all that apply to you. This is a critical step.",
       "cough_gt_2_weeks": "Cough lasting more than 2 weeks",
       "cough_with_sputum": "Cough with sputum (phlegm)",
       "cough_with_blood": "Coughing up blood or blood-stained sputum",
@@ -68,67 +79,225 @@
       "night_sweats": "Night sweats",
       "chest_pain": "Chest pain or difficulty breathing",
       "loss_of_appetite": "Loss of appetite",
-      "none_of_the_above": "None of the above symptoms"
+      "tb_contact": "Recent contact with a person with TB",
+      "none_of_the_above": "None of the above"
     },
     "deep": {
-      "select_one": "Please select the option that best describes your situation.",
-      "cough_duration": {
-        "title": "How long have you had this cough?",
-        "options": {
-          "short": "Less than 2 weeks",
-          "medium": "2-4 weeks",
-          "long": "More than 1 month"
+      "cough_gt_2_weeks": [
+        {
+          "questionKey": "cough_duration",
+          "title": "How long have you been coughing?",
+          "type": "radio",
+          "options": [
+            { "value": "2_4_weeks", "label": "2-4 weeks" },
+            { "value": "1_2_months", "label": "1-2 months" },
+            { "value": "gt_2_months", "label": "More than 2 months" }
+          ]
+        },
+        {
+          "questionKey": "cough_sputum_nature",
+          "title": "What is the nature of your cough and sputum?",
+          "type": "radio",
+          "options": [
+            { "value": "dry", "label": "Mainly dry, no sputum" },
+            {
+              "value": "sputum_clear_white",
+              "label": "Productive with clear or white sputum"
+            },
+            {
+              "value": "sputum_yellow_green",
+              "label": "Productive with yellow or green sputum"
+            }
+          ]
+        },
+        {
+          "questionKey": "cough_severity",
+          "title": "How would you rate the severity of your cough?",
+          "type": "radio",
+          "options": [
+            {
+              "value": "mild",
+              "label": "Mild (occasional, doesn't disrupt activities)"
+            },
+            {
+              "value": "moderate",
+              "label": "Moderate (frequent, sometimes disrupts sleep or activities)"
+            },
+            {
+              "value": "severe",
+              "label": "Severe (persistent, significantly affects daily life)"
+            }
+          ]
         }
-      },
-      "cough_type": {
-        "title": "What type of cough do you have?",
-        "options": {
-          "dry": "Dry cough",
-          "sputum": "Cough with sputum (phlegm)", 
-          "blood": "Cough with blood"
+      ],
+      "cough_with_sputum": [],
+      "cough_with_blood": [
+        {
+          "questionKey": "blood_amount",
+          "title": "How much blood do you see when you cough?",
+          "type": "radio",
+          "options": [
+            { "value": "streaks", "label": "Only streaks of blood in sputum" },
+            { "value": "teaspoon", "label": "About a teaspoon" },
+            { "value": "tablespoon", "label": "More than a tablespoon" }
+          ]
+        },
+        {
+          "questionKey": "blood_frequency",
+          "title": "How often have you coughed up blood?",
+          "type": "radio",
+          "options": [
+            { "value": "once", "label": "It happened just once" },
+            {
+              "value": "few_times",
+              "label": "A few times over the last weeks"
+            },
+            { "value": "daily", "label": "It happens daily" }
+          ]
         }
-      },
-      "fever_pattern": {
-        "title": "Describe your fever pattern:",
-        "options": {
-          "evening": "Evening/low-grade fever",
-          "high": "High fever with chills",
-          "none": "No fever"
+      ],
+      "fever_evening": [
+        {
+          "questionKey": "fever_pattern",
+          "title": "Describe your fever pattern:",
+          "type": "radio",
+          "options": [
+            {
+              "value": "low_evening",
+              "label": "Low-grade, mainly in the evening"
+            },
+            { "value": "high_chills", "label": "High fever with chills" },
+            { "value": "intermittent", "label": "Comes and goes" }
+          ]
+        },
+        {
+          "questionKey": "fever_duration",
+          "title": "How long have you had this fever?",
+          "type": "radio",
+          "options": [
+            { "value": "lt_1_week", "label": "Less than 1 week" },
+            { "value": "1_2_weeks", "label": "1-2 weeks" },
+            { "value": "gt_2_weeks", "label": "More than 2 weeks" }
+          ]
         }
-      },
-      "weight_appetite": {
-        "title": "Have you experienced any of the following?",
-        "options": {
-          "weight": "Weight loss",
-          "appetite": "Loss of appetite",
-          "both": "Both weight loss and loss of appetite",
-          "none": "Neither"
+      ],
+      "weight_loss": [
+        {
+          "questionKey": "weight_loss_amount",
+          "title": "Approximately how much weight have you lost unintentionally?",
+          "type": "radio",
+          "options": [
+            { "value": "2_5_kg", "label": "2-5 kg" },
+            { "value": "5_10_kg", "label": "5-10 kg" },
+            { "value": "gt_10_kg", "label": "More than 10 kg" }
+          ]
+        },
+        {
+          "questionKey": "weight_loss_period",
+          "title": "Over what time period did this weight loss occur?",
+          "type": "radio",
+          "options": [
+            { "value": "1_3_months", "label": "Over the last 1-3 months" },
+            { "value": "3_6_months", "label": "Over the last 3-6 months" },
+            { "value": "gt_6_months", "label": "More than 6 months ago" }
+          ]
         }
-      },
-      "night_sweats": {
-        "title": "Do you experience any of these?",
-        "options": {
-          "sweats": "Night sweats",
-          "fatigue": "Persistent fatigue",
-          "both": "Both night sweats and fatigue",
-          "none": "Neither"
+      ],
+      "night_sweats": [
+        {
+          "questionKey": "sweats_severity",
+          "title": "How severe are your night sweats?",
+          "type": "radio",
+          "options": [
+            { "value": "mild", "label": "Mild (light sweating)" },
+            { "value": "moderate", "label": "Moderate (soaks your sleepwear)" },
+            {
+              "value": "severe",
+              "label": "Severe (requires changing bedsheets)"
+            }
+          ]
+        },
+        {
+          "questionKey": "sweats_frequency",
+          "title": "How frequently do you experience them?",
+          "type": "radio",
+          "options": [
+            { "value": "weekly", "label": "A few times a week" },
+            { "value": "nightly", "label": "Almost every night" }
+          ]
         }
-      },
-      "exposure": {
-        "title": "Have you had contact with anyone with TB?",
-        "options": {
-          "family": "Family member with TB",
-          "workplace": "Close workplace contact",
-          "community": "Neighbor or community contact",
-          "none": "No known contact"
+      ],
+      "chest_pain": [
+        {
+          "questionKey": "chest_pain_nature",
+          "title": "What does the chest pain feel like?",
+          "type": "radio",
+          "options": [
+            { "value": "sharp", "label": "Sharp and stabbing" },
+            { "value": "dull", "label": "A dull, persistent ache" },
+            {
+              "value": "tightness",
+              "label": "A feeling of tightness or pressure"
+            }
+          ]
+        },
+        {
+          "questionKey": "breathing_difficulty",
+          "title": "Is the pain worse when breathing deeply or coughing?",
+          "type": "radio",
+          "options": [
+            { "value": "yes", "label": "Yes" },
+            { "value": "no", "label": "No" },
+            {
+              "value": "constant",
+              "label": "The pain is constant and doesn't change"
+            }
+          ]
         }
-      }
+      ],
+      "loss_of_appetite": [
+        {
+          "questionKey": "appetite_loss_duration",
+          "title": "How long have you experienced loss of appetite?",
+          "type": "radio",
+          "options": [
+            { "value": "lt_1_week", "label": "Less than 1 week" },
+            { "value": "1_4_weeks", "label": "1-4 weeks" },
+            { "value": "gt_1_month", "label": "More than 1 month" }
+          ]
+        }
+      ],
+      "tb_contact": [
+        {
+          "questionKey": "contact_type",
+          "title": "What is your relationship with the TB patient?",
+          "type": "radio",
+          "options": [
+            { "value": "household", "label": "Lives in the same household" },
+            {
+              "value": "workplace",
+              "label": "Close workplace or school contact"
+            },
+            { "value": "community", "label": "Neighbor or community member" }
+          ]
+        },
+        {
+          "questionKey": "contact_duration",
+          "title": "How recent was your contact?",
+          "type": "radio",
+          "options": [
+            { "value": "lt_3_months", "label": "Within the last 3 months" },
+            { "value": "3_12_months", "label": "3-12 months ago" },
+            { "value": "gt_12_months", "label": "More than a year ago" }
+          ]
+        }
+      ]
     },
     "upload": {
       "title": "Upload Medical Reports (Optional)",
-      "subtitle": "You can upload any existing medical reports to help with the assessment.",
+      "subtitle": "If you have existing medical reports, please upload them to help with the assessment.",
       "chest_xray": "Chest X-ray",
-      "sputum_test": "Sputum test / CBNAAT", 
+      "sputum_test": "Sputum test / CBNAAT",
       "blood_test": "Blood test results",
       "drop_files": "Drop files here to upload",
       "or_click": "or click to browse files",
@@ -141,7 +310,7 @@
     },
     "review": {
       "title": "Review Your Information",
-      "subtitle": "Please review the information you've provided before submitting.",
+      "subtitle": "Please review the information you've provided before submitting for analysis.",
       "basic_info": "Basic Information",
       "symptoms": "Reported Symptoms",
       "detailed_questions": "Detailed Responses",
@@ -156,7 +325,7 @@
     "likelihood_title": "TB Likelihood Assessment",
     "likelihood": {
       "high": "HIGH RISK",
-      "moderate": "MODERATE RISK", 
+      "moderate": "MODERATE RISK",
       "low": "LOW RISK",
       "confirmed": "HIGH CONCERN"
     },
@@ -175,7 +344,7 @@
       "title": "About Tuberculosis (TB)",
       "what_is_tb": "TB is a bacterial infection that mainly affects the lungs but can affect any part of the body.",
       "how_spreads": "It spreads through air when people with active TB cough, sneeze, or spit.",
-      "curable": "TB is completely curable with proper treatment and medication adherence.", 
+      "curable": "TB is completely curable with proper treatment and medication adherence.",
       "next_steps": "Early detection and treatment prevent spread to others and serious complications.",
       "helpline": "National TB Helpline"
     },

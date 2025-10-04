@@ -3,230 +3,246 @@
 @tailwind utilities;
 
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-        "Helvetica Neue", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: "Poppins", "Noto Sans Devanagari", "Segoe UI", "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-        monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 @layer base {
   :root {
-        /* Enhanced medical color palette */
-        --background: 0 0% 100%;
-        --foreground: 220 13% 18%;  /* Darker, more professional */
-        --card: 0 0% 100%;
-        --card-foreground: 220 13% 18%;
-        --popover: 0 0% 100%;
-        --popover-foreground: 220 13% 18%;
-        
-        /* Primary: Deep medical blue - trustworthy and professional */
-        --primary: 210 50% 25%;     /* #1F4E79 - Deep medical blue */
-        --primary-foreground: 0 0% 98%;
-        
-        /* Secondary: Soft medical gray */
-        --secondary: 210 16% 93%;   /* Light medical gray */
-        --secondary-foreground: 210 50% 25%;
-        
-        /* Muted: Professional neutrals */
-        --muted: 210 16% 93%;
-        --muted-foreground: 210 10% 45%;
-        
-        /* Accent: Medical teal for positive actions */
-        --accent: 174 44% 37%;      /* #2B8C7A - Medical teal */
-        --accent-foreground: 0 0% 98%;
-        
-        /* Destructive: Medical red for warnings */
-        --destructive: 0 65% 55%;   /* Medical red */
-        --destructive-foreground: 0 0% 98%;
-        
-        /* Borders and inputs */
-        --border: 210 20% 90%;      /* Subtle medical gray borders */
-        --input: 210 20% 90%;
-        --ring: 210 50% 25%;        /* Focus ring matches primary */
-        
-        /* Medical chart colors */
-        --chart-1: 210 50% 55%;     /* Medical blue */
-        --chart-2: 174 44% 45%;     /* Medical teal */
-        --chart-3: 45 93% 47%;      /* Medical amber */
-        --chart-4: 120 40% 50%;     /* Medical green */
-        --chart-5: 0 65% 55%;       /* Medical red */
-        
-        /* Success colors */
-        --success: 142 71% 45%;     /* Medical green */
-        --success-foreground: 0 0% 98%;
-        
-        /* Warning colors */
-        --warning: 45 93% 47%;      /* Medical amber */
-        --warning-foreground: 220 13% 18%;
-        
-        /* Info colors */
-        --info: 199 89% 48%;        /* Medical blue info */
-        --info-foreground: 0 0% 98%;
-        
-        --radius: 0.5rem;
-    }
-    
+    /* Enhanced medical color palette */
+    --background: 0 0% 100%;
+    --foreground: 220 13% 18%;
+    /* Darker, more professional */
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 18%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 18%;
+
+    /* Primary: Deep medical blue - trustworthy and professional */
+    --primary: 210 50% 25%;
+    /* #1F4E79 - Deep medical blue */
+    --primary-foreground: 0 0% 98%;
+
+    /* Secondary: Soft medical gray */
+    --secondary: 210 16% 93%;
+    /* Light medical gray */
+    --secondary-foreground: 210 50% 25%;
+
+    /* Muted: Professional neutrals */
+    --muted: 210 16% 93%;
+    --muted-foreground: 210 10% 45%;
+
+    /* Accent: Medical teal for positive actions */
+    --accent: 174 44% 37%;
+    /* #2B8C7A - Medical teal */
+    --accent-foreground: 0 0% 98%;
+
+    /* Destructive: Medical red for warnings */
+    --destructive: 0 65% 55%;
+    /* Medical red */
+    --destructive-foreground: 0 0% 98%;
+
+    /* Borders and inputs */
+    --border: 210 20% 90%;
+    /* Subtle medical gray borders */
+    --input: 210 20% 90%;
+    --ring: 210 50% 25%;
+    /* Focus ring matches primary */
+
+    /* Medical chart colors */
+    --chart-1: 210 50% 55%;
+    /* Medical blue */
+    --chart-2: 174 44% 45%;
+    /* Medical teal */
+    --chart-3: 45 93% 47%;
+    /* Medical amber */
+    --chart-4: 120 40% 50%;
+    /* Medical green */
+    --chart-5: 0 65% 55%;
+    /* Medical red */
+
+    /* Success colors */
+    --success: 142 71% 45%;
+    /* Medical green */
+    --success-foreground: 0 0% 98%;
+
+    /* Warning colors */
+    --warning: 45 93% 47%;
+    /* Medical amber */
+    --warning-foreground: 220 13% 18%;
+
+    /* Info colors */
+    --info: 199 89% 48%;
+    /* Medical blue info */
+    --info-foreground: 0 0% 98%;
+
+    --radius: 0.5rem;
+  }
+
   .dark {
-        --background: 220 13% 9%;
-        --foreground: 0 0% 98%;
-        --card: 220 13% 9%;
-        --card-foreground: 0 0% 98%;
-        --popover: 220 13% 9%;
-        --popover-foreground: 0 0% 98%;
-        --primary: 199 89% 48%;
-        --primary-foreground: 220 13% 9%;
-        --secondary: 220 13% 15%;
-        --secondary-foreground: 0 0% 98%;
-        --muted: 220 13% 15%;
-        --muted-foreground: 220 9% 65%;
-        --accent: 174 44% 45%;
-        --accent-foreground: 0 0% 98%;
-        --destructive: 0 65% 55%;
-        --destructive-foreground: 0 0% 98%;
-        --border: 220 13% 15%;
-        --input: 220 13% 15%;
-        --ring: 199 89% 48%;
-        --chart-1: 199 89% 48%;
-        --chart-2: 174 44% 45%;
-        --chart-3: 45 93% 47%;
-        --chart-4: 142 71% 45%;
-        --chart-5: 0 65% 55%;
-        --success: 142 71% 45%;
-        --success-foreground: 0 0% 98%;
-        --warning: 45 93% 47%;
-        --warning-foreground: 220 13% 9%;
-        --info: 199 89% 48%;
-        --info-foreground: 0 0% 98%;
-    }
+    --background: 220 13% 9%;
+    --foreground: 0 0% 98%;
+    --card: 220 13% 9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 220 13% 9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 199 89% 48%;
+    --primary-foreground: 220 13% 9%;
+    --secondary: 220 13% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 220 13% 15%;
+    --muted-foreground: 220 9% 65%;
+    --accent: 174 44% 45%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 13% 15%;
+    --input: 220 13% 15%;
+    --ring: 199 89% 48%;
+    --chart-1: 199 89% 48%;
+    --chart-2: 174 44% 45%;
+    --chart-3: 45 93% 47%;
+    --chart-4: 142 71% 45%;
+    --chart-5: 0 65% 55%;
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 98%;
+    --warning: 45 93% 47%;
+    --warning-foreground: 220 13% 9%;
+    --info: 199 89% 48%;
+    --info-foreground: 0 0% 98%;
+  }
 }
 
 @layer base {
   * {
     @apply border-border;
   }
-  
+
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
-  
+
   /* Enhanced medical styling */
   .medical-card {
     @apply bg-white border border-border rounded-lg shadow-sm;
   }
-  
+
   .medical-button-primary {
     @apply bg-primary text-primary-foreground hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:ring-offset-2;
   }
-  
+
   .medical-button-secondary {
     @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 border border-border;
   }
-  
+
   .medical-button-accent {
     @apply bg-accent text-accent-foreground hover:bg-accent/90;
   }
-  
+
   .risk-high {
     @apply bg-red-50 text-red-800 border-red-200;
   }
-  
+
   .risk-moderate {
     @apply bg-amber-50 text-amber-800 border-amber-200;
   }
-  
+
   .risk-low {
     @apply bg-green-50 text-green-800 border-green-200;
   }
-  
+
   .urgency-immediate {
     @apply bg-red-600 text-white;
   }
-  
+
   .urgency-testsoon {
     @apply bg-amber-600 text-white;
   }
-  
+
   .urgency-monitor {
     @apply bg-slate-600 text-white;
   }
-  
+
   /* Professional medical forms */
   .medical-input {
     @apply w-full px-3 py-2 border border-input bg-background rounded-md focus:ring-2 focus:ring-primary focus:border-transparent;
   }
-  
+
   .medical-label {
     @apply block text-sm font-medium text-foreground mb-1;
   }
-  
+
   .medical-helper {
     @apply text-xs text-muted-foreground mt-1;
   }
-  
+
   /* Progress indicators */
   .progress-bar {
     @apply w-full bg-secondary rounded-full h-2;
   }
-  
+
   .progress-fill {
     @apply bg-primary h-2 rounded-full transition-all duration-300;
   }
-  
+
   /* Accessibility improvements */
   .focus-visible {
     @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
   }
-  
+
   /* Medical icons and badges */
   .medical-badge {
     @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
   }
-  
+
   .medical-icon {
     @apply h-5 w-5 text-muted-foreground;
   }
-  
+
   /* Responsive medical layout */
   .medical-container {
     @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
   }
-  
+
   .medical-grid {
     @apply grid gap-6 md:grid-cols-2 lg:grid-cols-3;
   }
-  
+
   /* Animation for medical UI */
   .slide-up {
     animation: slideUp 0.3s ease-out;
   }
-  
+
   @keyframes slideUp {
     from {
       opacity: 0;
       transform: translateY(20px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
     }
   }
-  
+
   .fade-in {
     animation: fadeIn 0.4s ease-out;
   }
-  
+
   @keyframes fadeIn {
     from {
       opacity: 0;
     }
+
     to {
       opacity: 1;
     }
